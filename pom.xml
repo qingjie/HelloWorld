@@ -5,7 +5,7 @@
   <artifactId>HelloWorld</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <name>HelloWorld Maven Webapp</name>
+  <name>HelloWorld</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -18,4 +18,16 @@
   <build>
     <finalName>HelloWorld</finalName>
   </build>
+  <distributionManagement>    
+	  <repository>   
+		  <id>releases</id>
+          <name>Nexus Release Repository</name>       		    		
+          <url>http://ec2-52-11-132-113.us-west-2.compute.amazonaws.com:8081/nexus/content/repositories/releases/</url>    
+	  </repository>     		
+	  <snapshotRepository>  
+		  <id>snapshots</id>    
+		  <name>Nexus Snapshot Repository</name>       		
+		  <url>http://ec2-52-11-132-113.us-west-2.compute.amazonaws.com:8081/nexus/content/repositories/snapshots/</url>    
+	  </snapshotRepository> 	
+  </distributionManagement>
 </project>
